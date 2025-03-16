@@ -3,7 +3,7 @@
 Docker files included.
 First set up your .env file and database credentials (mysql image uses .env DB_DATABASE,DB_USERNAME,DB_PASSWORD to configure mysql service, use any username other than root, root user's default password also sets by DB_PASSWORD).
 After that you can start container by running following command:"docker compose up -d".
-DB hostname is "mysql".
+Inside container network DB hostname is "mysql".
 
 ## Tests
 Before testing you need to configure following .env variables:<br>
