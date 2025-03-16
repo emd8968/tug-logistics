@@ -25,7 +25,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Install PHP extensions
 RUN docker-php-ext-configure gd --with-freetype=/usr/include/
 RUN docker-php-ext-install -j$(nproc) gd
-RUN docker-php-ext-install mbstring zip exif pcntl xml intl
+RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl xml intl
 
 # Configure PHP
 RUN sed -i -e "s/upload_max_filesize = .*/upload_max_filesize = 40M/g" \
