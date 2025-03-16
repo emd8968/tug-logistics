@@ -6,3 +6,4 @@ use \App\Http\Controllers\VehicleController;
 
 Route::resource('drivers', DriverController::class)->only('index', 'store');
 Route::resource('vehicles', VehicleController::class)->only('index', 'store');
+Route::post('drivers/{driver}/assign-vehicle', [DriverController::class, 'assignVehicle']);

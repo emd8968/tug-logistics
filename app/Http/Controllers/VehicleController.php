@@ -16,16 +16,16 @@ class VehicleController extends Controller
 
     public function index()
     {
-        $users = $this->vehicleService->getAll();
+        $vehicles = $this->vehicleService->getAll();
 
-        return VehicleResource::collection($users);
+        return VehicleResource::collection($vehicles);
     }
 
     public function store(VehicleStoreRequest $request)
     {
         $data = $request->validated();
-        $user = $this->vehicleService->create($data);
-        return VehicleResource::make($user);
+        $vehicle = $this->vehicleService->create($data);
+        return VehicleResource::make($vehicle);
     }
 
 
